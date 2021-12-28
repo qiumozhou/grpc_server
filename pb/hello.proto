@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package ="./";
+
+service Tester{
+  rpc MyTest(Request) returns (Response){}
+}
+
+// 函数参数
+message  Request{
+  string  jsonStr = 1;
+}
+
+// 函数返回值
+message  Response{
+  string  backJson = 1;
+}
